@@ -18,11 +18,11 @@ def handle_action():
         case "2":
             print(get_all_tasks())
             index = int(input("Choose task index to remove: "))
-            remove_task(index)
+            remove_task(index-1)
         case "3":
             print(get_all_tasks())
             index = int(input("Choose task index to mark as done: "))
-            mark_task_completed(index, True)
+            mark_task_completed(index-1, True)
         case "4":
             print(get_all_tasks())
         case _:
