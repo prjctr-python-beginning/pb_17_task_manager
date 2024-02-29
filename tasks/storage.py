@@ -14,6 +14,8 @@ def remove_task(index: int) -> None:
 def mark_task_completed(index: int, completed: bool) -> None:
     _DB[index]["completed"] = completed
 
+# changing format of output view
 
-def get_all_tasks() -> List[Tuple[int, str, bool]]:
-    return [(i, task["title"], task["completed"]) for i, task in enumerate(_DB)]
+  
+def get_all_tasks() -> List[Tuple[bool, int, str]]:
+    return [(task["completed"], i, task["title"]) for i, task in enumerate(_DB)]
